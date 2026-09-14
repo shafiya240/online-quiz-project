@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizMaster - Online Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen">
+            <h1>QuizMaster</h1>
+
+            <p>Test your knowledge with our interactive quiz!</p>
+
+            <input
+                type="text"
+                id="player-name"
+                placeholder="Enter your name"
+            >
+
+            <select id="category">
+                <option value="general">General Knowledge</option>
+                <option value="computer">Computer Science</option>
+                <option value="web">Web Development</option>
+            </select>
+
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+
+            <div class="quiz-header">
+
+                <span id="question-number">
+                    Question 1 of 10
+                </span>
+
+                <span id="timer">
+                    30
+                </span>
+
+            </div>
+
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+            <h2 id="question">
+                Question appears here
+            </h2>
+
+            <div id="options"></div>
+
+            <button id="next-btn" disabled>
+                Next
+            </button>
+
+        </div>
+
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+
+            <h1>Quiz Completed!</h1>
+
+            <h2 id="result-name"></h2>
+
+            <div class="result-box">
+
+                <p>Your Score</p>
+
+                <h2 id="score">0 / 10</h2>
+
+                <p id="percentage">0%</p>
+
+            </div>
+
+            <p id="result-message"></p>
+
+            <button id="restart-btn">
+                Restart Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
